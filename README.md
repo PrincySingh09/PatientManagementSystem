@@ -6,6 +6,7 @@
 
 
 **How to Run the Project.**
+
   Clone  the repository to your local environment.
 
   Set up the required database configuration in application.properties.
