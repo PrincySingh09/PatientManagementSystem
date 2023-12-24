@@ -1,12 +1,11 @@
-Basic Information:
+**Basic Information:**
 
   This project is a Restful web service developed using Spring Boot, utilizing JPA for data persistence. 
 
   It enables the management of patients' comprehensive information, prescription details, prescriber data, insurance information, clinical data, and user contacts.
 
 
-How to Run the Project.
-
+**How to Run the Project.**
   Clone  the repository to your local environment.
 
   Set up the required database configuration in application.properties.
