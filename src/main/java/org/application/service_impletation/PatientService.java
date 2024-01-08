@@ -12,15 +12,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 
-
-
-
 // @Service
 // public class PatientService {
 	
 // 	@Autowired
 // 	private PatientRepository patientRepository;
-
 
 //     public List<Patient> getAllPatients()
 //     {
@@ -108,7 +104,7 @@ public class PatientService {
         contacts.forEach(contact -> contact.setPatientRelations(patientRelations));
         contacts.forEach(contact -> contactRepository.save(contact));
 
-    prescriptions.forEach(prescription -> prescription.setPatientRelations(patientRelations));
+        prescriptions.forEach(prescription -> prescription.setPatientRelations(patientRelations));
         prescriptions.forEach(prescription -> prescriptionRepository.save(prescription));
 
         addresses.forEach(address -> address.setPatientRelations(patientRelations));
@@ -149,7 +145,6 @@ public class PatientService {
         ClinicalInfo existingClinicalInfo = existingPatient.getPatientRelations().getClinicalInfo();
         existingClinicalInfo.setHeight(updatedClinicalInfo.getHeight());
         existingClinicalInfo.setWeight(updatedClinicalInfo.getWeight());
-        // Update other properties as needed
     
         // Update relationships: Allergies
         List<Allergies> updatedAllergies = updatedClinicalInfo.getAllergies();
@@ -172,8 +167,7 @@ public class PatientService {
         existingInsurance.setLastName(updatedInsurance.getLastName());
         // save the updated insurance
         insuranceRepository.save(existingInsurance);
-        // Update other properties as needed
-    
+ 
         // Update relationships: Contacts
         List<Contact> updatedContacts = updatedPatientWithRelations.getPatientRelations().getContacts();
         List<Contact> existingContacts = existingPatient.getPatientRelations().getContacts();
@@ -206,7 +200,6 @@ existingContacts.forEach(contact ->contact.setPatientRelations(existingPatient.g
         existingPrescriber.setFirstName(updatedPrescriber.getFirstName());
         existingPrescriber.setLastName(updatedPrescriber.getLastName());
         existingPrescriber.setTitle(updatedPrescriber.getTitle());
-        // Update other properties as needed
     
         // Set the updated Prescriber back to the existing PatientRelations
         existingPatient.getPatientRelations().setPrescriber(existingPrescriber);
