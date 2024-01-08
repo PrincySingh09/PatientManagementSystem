@@ -10,9 +10,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
-// Add the necessary dependency for javax.persistence
 import java.util.NoSuchElementException;
 
 
