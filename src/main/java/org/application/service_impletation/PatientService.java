@@ -12,44 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 
-// @Service
-// public class PatientService {
-	
-// 	@Autowired
-// 	private PatientRepository patientRepository;
-
-//     public List<Patient> getAllPatients()
-//     {
-//         List<Patient> patientList = patientRepository.findAll();
-//         return patientList;
-//     }
- 
-//     public Patient savePatient(Patient patient)
-//     {
-//         return patientRepository.save(patient);
-//     }
-
-//     public Patient getPatient(Long id)
-//     {
-//         Patient newPatient = null;
-//         Optional<Patient> patient = patientRepository.findById(id);
-//         if(patient.isPresent())
-//         {
-//             newPatient = patient.get();
-//         }
-//         return newPatient;
-//     }
-
-//     public Patient updatePatient(Patient patient) {
-//     	return patientRepository.save(patient);
-//     }
-    
-//     public String deleteById(Long id)
-//     {
-//         patientRepository.deleteById(id);
-//         return "Deleted Patient with patient id "+id;
-//     }
-// }
 
 @Service
 public class PatientService {
@@ -214,10 +176,10 @@ existingContacts.forEach(contact ->contact.setPatientRelations(existingPatient.g
         return patientList;
     }
  
-    public Patient savePatient(Patient patient)
-    {
-        return patientRepository.save(patient);
-    }
+    // public Patient savePatient(Patient patient)
+    // {
+    //     return patientRepository.save(patient);
+    // }
 
     public Patient getPatient(Long id)
     {
@@ -230,9 +192,9 @@ existingContacts.forEach(contact ->contact.setPatientRelations(existingPatient.g
         return newPatient;
     }
 
-    public Patient updatePatient(Patient patient) {
-    	return patientRepository.save(patient);
-    }
+    // public Patient updatePatient(Patient patient) {
+    // 	return patientRepository.save(patient);
+    // }
     
     public String deleteById(Long id)
     {
